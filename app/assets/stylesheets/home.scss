@@ -1,0 +1,180 @@
+.title {
+  font-family: 'Bangers';
+  letter-spacing: 2px;
+}
+
+.container {
+  display: flex;
+  position: relative;
+}
+
+.profile::before {
+  content: '';
+  background: #877e7e;
+  width: 253px;
+  height: 253px;
+  clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%);
+  position : absolute;
+  left: 2px;
+  top: 2px;
+}
+
+.profile {
+  width: 257px;
+  height: 254px;
+  position: relative;
+  clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%);
+  background: black;
+}
+
+.profile-img {
+  width: 253px;
+  filter: grayscale(100%);
+  clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%);
+  top: 2px;
+  left: 2px;
+  position: absolute;
+}
+
+.infos {
+  position: absolute;
+  bottom: 0px;
+  left: 2px;
+  color: #C4C3AF;
+  width: 92%;
+  backdrop-filter: blur(4px);
+  font-family: 'Bangers';
+}
+
+p.profile-name {
+  margin-left: 5px;
+  letter-spacing: 2px;
+}
+
+p.profile-description {
+  margin-left: 5px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.cv_button {
+  background: linear-gradient(to bottom, #c4c3af 5%, #ffffff 100%);
+  background-color: #c4c3af;
+  border-radius: 40px;
+  cursor: pointer;
+  color: #000000;
+  font-family: 'Bangers';
+  font-size: 20px;
+  padding: 10px 10px;
+  text-decoration: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.cv_button:hover {
+	background:linear-gradient(to bottom, #ffffff 5%, #c4c3af 100%);
+	background-color:#ffffff;
+}
+
+.test::before {
+  content: '';
+  background: #877e7e;
+  height: 250px;
+  width: 757px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 7% 100%);
+  position: absolute;
+  left: 2px;
+  top: 2px;
+}
+
+.test {
+  background: #000;
+  height: 254px;
+  width: 761px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 7% 100%);
+  margin-left: 10px;
+  position: absolute;
+  left: 206px;
+}
+
+.test2 {
+  background: rgb(159, 150, 150);
+  height: 500px;
+  width: 250px;
+  border: 2px solid black;
+  position: absolute;
+  right: 10px;
+}
+
+.test3::before {
+  content: '';
+  background: #877e7e;
+  height: 238px;
+  width: 486px;
+  clip-path: polygon(0% 0%, 100% 0%, 93% 100%, 0% 100%);
+  position: absolute;
+  left: 2px;
+  top: 2px;
+}
+
+.test3 {
+  background: #000;
+  height: 242px;
+  width: 490px;
+  position: absolute;
+  left: 0px;
+  top: 262px;
+  clip-path: polygon(0% 0%, 100% 0%, 93% 100%, 0% 100%);
+}
+
+.test4::before {
+  content: '';
+  background: #877e7e;
+  height: 238px;
+  width: 507px;
+  clip-path: polygon(7% 0%, 100% 0%, 100% 100%, 0% 100%);
+  position: absolute;
+  left: 2px;
+  top: 2px;
+}
+
+.test4 {
+  background: #000;
+  height: 242px;
+  width: 511px;
+  position: absolute;
+  right: 272px;
+  top: 262px;
+  clip-path: polygon(7% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.test5 {
+  background: rgb(178, 145, 145);
+  height: 238px;
+  width: 401px;
+  border: 2px solid black;
+  position: absolute;
+  right: 10px;
+  top: 512px;
+}
+
+.test6 {
+  background: rgb(181, 157, 157);
+  height: 238px;
+  width: 409px;
+  border: 2px solid black;
+  position: absolute;
+  right: 423px;
+  top: 512px;
+}
+
+.test7 {
+  background: rgb(180, 157, 157);
+  height: 238px;
+  width: 401px;
+  border: 2px solid black;
+  position: absolute;
+  right: 844px;
+  top: 512px;
+}

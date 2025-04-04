@@ -1,0 +1,32 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+
+  img.logo {
+    width: 200px;
+  }
+
+  a {
+    background-color: black;
+    color: #c4c3af;
+    text-decoration: none;
+    padding: 5px;
+    font-family: 'Bangers';
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: 0 5px;
+  }
+
+  a:hover {
+    background-color: #c4c3af;
+    color: black;
+    transition: background-color 0.3s ease;
+  }
+}
+
+.navbar-content {
+  border: 2px solid black;
+  padding: 10px;
+}
