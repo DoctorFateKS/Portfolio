@@ -7,13 +7,13 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-areas:
-      "profile test test test test test2"
-      "test3 test3 test4 test4 . ."
-      "test5 test5 test6 test6 test7 test7";
+    "profile test test test test test2"
+    "test3 test3 test4 test4 . ."
+    "test5 test5 test6 test6 test7 test7";
   gap: 10px;
 }
 
-.container > * {
+.container>* {
   display: grid;
   gap: 10px;
 }
@@ -29,8 +29,8 @@
 }
 
 .profile-img {
-  width: calc(100% - 4px);
-  height: 100%;
+  width: 100%;
+  max-height: 100%;
   filter: grayscale(100%);
   clip-path: polygon(0% 0%, 77% 0%, 100% 100%, 0% 100%);
   top: 2px;
@@ -76,8 +76,8 @@ p.profile-description {
 }
 
 .cv_button:hover {
-	background:linear-gradient(to bottom, #ffffff 5%, #c4c3af 100%);
-	background-color:#ffffff;
+  background: linear-gradient(to bottom, #ffffff 5%, #c4c3af 100%);
+  background-color: #ffffff;
 }
 
 .test {
@@ -169,4 +169,48 @@ p.profile-description {
   background: #b49d9d;
   height: 238px;
   border: 2px solid black;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats-left {
+  font-family: 'Bangers';
+  width: 70%;
+}
+
+.stats-right {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Bangers';
+  width: 30%;
+}
+
+.stats-infos1, .stats-infos2, .stats-infos3 {
+  flex: 1; /* Chaque div prend une part égale de l'espace disponible */
+  display: flex;
+  flex-direction: column; /* Aligne les éléments verticalement */
+  align-items: center; /* Centre horizontalement les éléments */
+  text-align: center; /* Centre le texte */
+}
+
+.stats-number {
+  font-size: 2rem; /* Taille relative pour s'adapter au zoom */
+  margin: 0;
+}
+
+.stats-icon {
+  font-size: 1rem; /* Taille relative pour s'adapter au zoom */
+  background: #bab8ab;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.stats-title {
+  font-size: 1rem; /* Taille relative pour s'adapter au zoom */
+  margin-top: 5px;
 }
