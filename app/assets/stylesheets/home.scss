@@ -7,13 +7,13 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-areas:
-      "profile test test test test test2"
-      "test3 test3 test4 test4 . ."
-      "test5 test5 test6 test6 test7 test7";
+    "profile test test test test test2"
+    "test3 test3 test4 test4 . ."
+    "test5 test5 test6 test6 test7 test7";
   gap: 10px;
 }
 
-.container > * {
+.container>* {
   display: grid;
   gap: 10px;
 }
@@ -29,8 +29,8 @@
 }
 
 .profile-img {
-  width: calc(100% - 4px);
-  height: 100%;
+  width: 100%;
+  max-height: 100%;
   filter: grayscale(100%);
   clip-path: polygon(0% 0%, 77% 0%, 100% 100%, 0% 100%);
   top: 2px;
@@ -76,8 +76,8 @@ p.profile-description {
 }
 
 .cv_button:hover {
-	background:linear-gradient(to bottom, #ffffff 5%, #c4c3af 100%);
-	background-color:#ffffff;
+  background: linear-gradient(to bottom, #ffffff 5%, #c4c3af 100%);
+  background-color: #ffffff;
 }
 
 .test {
@@ -169,4 +169,87 @@ p.profile-description {
   background: #b49d9d;
   height: 238px;
   border: 2px solid black;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats-left {
+  font-family: 'Bangers';
+  width: 70%;
+}
+
+.stats-right {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Bangers';
+  width: 30%;
+}
+
+.stats-infos1, .stats-infos2, .stats-infos3 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stats-number {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.stats-icon {
+  font-size: 1rem;
+  background: #bab8ab;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.stats-title {
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.loader{
+  width: 700px;
+  height: 45px;
+  border-radius: 25px;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #999;
+  background: #ccc;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar{
+  height: inherit;
+  width: 28%;
+  border-radius: inherit;
+  position: relative;
+  overflow: hidden;
+  background: #aba98f;
+}
+
+.percentage{
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  font-size: 16px;
+}
+
+.objectif{
+  font-family: 'Bangers';
+  font-size: 1.5rem;
+  margin: 5px;
+}
+
+.learning{
+  font-family: 'Bangers';
+  font-size: 1.2rem;
+  margin: 5px;
 }
