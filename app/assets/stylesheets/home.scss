@@ -4,36 +4,39 @@
 }
 
 .container {
-  display: flex;
-  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+      "profile test test test test test2"
+      "test3 test3 test4 test4 . ."
+      "test5 test5 test6 test6 test7 test7";
+  gap: 10px;
 }
 
-.profile::before {
-  content: '';
-  background: #877e7e;
-  width: 253px;
-  height: 253px;
-  clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%);
-  position : absolute;
-  left: 2px;
-  top: 2px;
+.container > * {
+  display: grid;
+  gap: 10px;
 }
 
 .profile {
-  width: 257px;
+  grid-area: profile;
+  grid-column: 1 / span 2;
+  width: calc(100% - 38%);
   height: 254px;
   position: relative;
-  clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 77% 0%, 100% 100%, 0% 100%);
   background: black;
 }
 
 .profile-img {
-  width: 253px;
+  width: calc(100% - 4px);
+  height: 100%;
   filter: grayscale(100%);
-  clip-path: polygon(0% 0%, 80% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0% 0%, 77% 0%, 100% 100%, 0% 100%);
   top: 2px;
   left: 2px;
   position: absolute;
+  object-fit: cover;
 }
 
 .infos {
@@ -77,104 +80,93 @@ p.profile-description {
 	background-color:#ffffff;
 }
 
+.test {
+  grid-area: test;
+  background: #000;
+  height: 254px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 7% 100%);
+  position: relative;
+}
+
 .test::before {
   content: '';
   background: #877e7e;
   height: 250px;
-  width: 757px;
+  width: calc(100% - 4px);
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 7% 100%);
   position: absolute;
   left: 2px;
   top: 2px;
 }
 
-.test {
-  background: #000;
-  height: 254px;
-  width: 761px;
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 7% 100%);
-  margin-left: 10px;
-  position: absolute;
-  left: 206px;
+.test2 {
+  grid-area: test2;
+  grid-row: 1 / span 2;
+  background: #9f9696;
+  height: 500px;
+  border: 2px solid black;
 }
 
-.test2 {
-  background: rgb(159, 150, 150);
-  height: 500px;
-  width: 250px;
-  border: 2px solid black;
-  position: absolute;
-  right: 10px;
+.test3 {
+  grid-area: test3;
+  grid-column: 1 / span 3;
+  width: calc(100% - 15.5%);
+  background: #000;
+  height: 242px;
+  position: relative;
+  clip-path: polygon(0% 0%, 100% 0%, 93% 100%, 0% 100%);
 }
 
 .test3::before {
   content: '';
   background: #877e7e;
   height: 238px;
-  width: 486px;
+  width: calc(100% - 4px);
   clip-path: polygon(0% 0%, 100% 0%, 93% 100%, 0% 100%);
-  position: absolute;
-  left: 2px;
-  top: 2px;
-}
-
-.test3 {
-  background: #000;
-  height: 242px;
-  width: 490px;
-  position: absolute;
-  left: 0px;
-  top: 262px;
-  clip-path: polygon(0% 0%, 100% 0%, 93% 100%, 0% 100%);
-}
-
-.test4::before {
-  content: '';
-  background: #877e7e;
-  height: 238px;
-  width: 507px;
-  clip-path: polygon(7% 0%, 100% 0%, 100% 100%, 0% 100%);
   position: absolute;
   left: 2px;
   top: 2px;
 }
 
 .test4 {
+  grid-area: test4;
+  grid-column: 3 / span 3;
+  width: calc(100% - 13%);
+  justify-self: end;
   background: #000;
   height: 242px;
-  width: 511px;
-  position: absolute;
-  right: 272px;
-  top: 262px;
+  position: relative;
   clip-path: polygon(7% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-.test5 {
-  background: rgb(178, 145, 145);
+.test4::before {
+  content: '';
+  background: #877e7e;
   height: 238px;
-  width: 401px;
-  border: 2px solid black;
+  width: calc(100% - 4px);
+  clip-path: polygon(7% 0%, 100% 0%, 100% 100%, 0% 100%);
   position: absolute;
-  right: 10px;
-  top: 512px;
+  left: 2px;
+  top: 2px;
+}
+
+.test5 {
+  grid-area: test5;
+  background: #b29191;
+  height: 238px;
+  border: 2px solid black;
 }
 
 .test6 {
-  background: rgb(181, 157, 157);
+  grid-area: test6;
+  background: #b59d9d;
   height: 238px;
-  width: 409px;
   border: 2px solid black;
-  position: absolute;
-  right: 423px;
-  top: 512px;
 }
 
 .test7 {
-  background: rgb(180, 157, 157);
+  grid-area: test7;
+  background: #b49d9d;
   height: 238px;
-  width: 401px;
   border: 2px solid black;
-  position: absolute;
-  right: 844px;
-  top: 512px;
 }
