@@ -191,26 +191,65 @@ p.profile-description {
 }
 
 .stats-infos1, .stats-infos2, .stats-infos3 {
-  flex: 1; /* Chaque div prend une part égale de l'espace disponible */
+  flex: 1;
   display: flex;
-  flex-direction: column; /* Aligne les éléments verticalement */
-  align-items: center; /* Centre horizontalement les éléments */
-  text-align: center; /* Centre le texte */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .stats-number {
-  font-size: 2rem; /* Taille relative pour s'adapter au zoom */
+  font-size: 2rem;
   margin: 0;
 }
 
 .stats-icon {
-  font-size: 1rem; /* Taille relative pour s'adapter au zoom */
+  font-size: 1rem;
   background: #bab8ab;
   padding: 5px;
   border-radius: 5px;
 }
 
 .stats-title {
-  font-size: 1rem; /* Taille relative pour s'adapter au zoom */
+  font-size: 1rem;
   margin-top: 5px;
+}
+
+.loader{
+  width: 700px;
+  height: 45px;
+  border-radius: 25px;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #999;
+  background: #ccc;
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar{
+  height: inherit;
+  width: 28%;
+  border-radius: inherit;
+  position: relative;
+  overflow: hidden;
+  background: #aba98f;
+}
+
+.percentage{
+  position: absolute;
+  top: 15px;
+  right: 5px;
+  font-size: 16px;
+}
+
+.objectif{
+  font-family: 'Bangers';
+  font-size: 1.5rem;
+  margin: 5px;
+}
+
+.learning{
+  font-family: 'Bangers';
+  font-size: 1.2rem;
+  margin: 5px;
 }
