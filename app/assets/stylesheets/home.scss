@@ -1,6 +1,7 @@
 .title {
   font-family: 'Bangers';
   letter-spacing: 2px;
+  margin-left: 15px;
 }
 
 .container {
@@ -172,22 +173,29 @@ p.profile-description {
 }
 
 .stats {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: space-between;
+  gap: 10px;
+  margin: 5px;
+}
+
+@media screen and (max-width: 980px) {
+  .stats {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
 }
 
 .stats-left {
   font-family: 'Bangers';
-  width: 70%;
 }
 
 .stats-right {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 10px;
   font-family: 'Bangers';
-  width: 30%;
 }
 
 .stats-infos1, .stats-infos2, .stats-infos3 {
@@ -216,7 +224,6 @@ p.profile-description {
 }
 
 .loader{
-  width: 700px;
   height: 45px;
   border-radius: 25px;
   border-bottom: 1px solid #fff;
@@ -251,5 +258,4 @@ p.profile-description {
 .learning{
   font-family: 'Bangers';
   font-size: 1.2rem;
-  margin: 5px;
 }
