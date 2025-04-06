@@ -2,14 +2,32 @@
   <div class="navbar-logo">
     <%= image_tag "logo.png", alt: "Logo", class: "logo" %>
   </div>
+
+  <button class="menu-toggle" aria-label="Ouvrir le menu">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <%# Navigation Menu %>
   <div class="navbar-content">
-    <%= link_to "Accueil", class: "active" %>
+    <%= link_to "Accueil", root_path, class: "active" %>
     <%= link_to "Profil" %>
     <%= link_to "Projets" %>
     <%= link_to "Blog/Articles" %>
     <%= link_to "Contact" %>
   </div>
-  <div class="navbar-toggle">
 
-  </div>
+  <button class="grayscale-toggle" aria-label="Toggle mode" onclick="toggleGrayscaleMode()">
+    <%= image_tag "couleur-toggle", alt: "Logo", class: "logo-grayscale-toggle no-filter", id: "grayscale-toggle-image" %>
+  </button>
+
+  <script>
+    function toggleGrayscaleMode() {
+      const image = document.getElementById('grayscale-toggle-image');
+      if (image.src.includes('couleur-toggle')) {
+        image.src = '<%= asset_path("mangas-toggle") %>';
+      } else {
+        image.src = '<%= asset_path("couleur-toggle") %>';
+      }
+    }
+  </script>
 </div>
