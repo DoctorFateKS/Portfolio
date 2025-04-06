@@ -2,5 +2,21 @@
 @import "home";
 
 body {
+  background: white;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+  will-change: filter;
+}
+
+body.color-mode {
+  filter: none;
   background: linear-gradient(#C4C3AF, #ffffff) no-repeat;
+}
+
+// Exclure certains éléments du filtre grayscale
+.no-filter {
+  filter: none;
+  position: relative; // Crée un nouveau contexte de positionnement
+  z-index: 1;        // Place l'élément au-dessus du contexte filtré
+  isolation: isolate; // Crée un nouveau contexte de rendu
 }
