@@ -197,29 +197,23 @@ p.profile-description {
   font-family: 'Bangers';
 }
 
-.stats-infos1, .stats-infos2, .stats-infos3 {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
 .stats-number {
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 0;
+  float: right
 }
 
 .stats-icon {
   font-size: 1rem;
   background: #bab8ab;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 10px;
+  margin-top: 17px;
 }
 
 .stats-title {
   font-size: 1rem;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 
 .loader{
@@ -252,6 +246,7 @@ p.profile-description {
   font-family: 'Bangers';
   font-size: 1.5rem;
   margin: 5px;
+  text-align: center;
 }
 
 .learning{
