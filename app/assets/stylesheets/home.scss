@@ -12,6 +12,7 @@
     "test3 test3 test4 test4 . ."
     "test5 test5 test6 test6 test7 test7";
   gap: 10px;
+  margin: 10px;
 }
 
 .container>* {
@@ -29,50 +30,70 @@
   background: black;
 }
 
+.profile::before {
+  content: '';
+  background: url('profile_photo.png') no-repeat center center;
+  background-size: cover;
+  height: 250px;
+  width: calc(100% - 5px);
+  clip-path: polygon(0% 0%, 77% 0%, 100% 100%, 0% 100%);
+  position: absolute;
+  left: 2px;
+  top: 2px;
+}
+
 .profile-img {
   width: 100%;
-  max-height: 100%;
-  clip-path: polygon(0% 0%, 77% 0%, 100% 100%, 0% 100%);
-  top: 2px;
-  left: 2px;
+  height: 100%;
+  object-fit: cover; /* pour garder les proportions sans déformer */
   position: absolute;
-  object-fit: cover;
+  top: 0;
+  left: 0;
+  z-index: 1; /* derrière les infos */
 }
 
 .infos {
   position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
   bottom: 0px;
   left: 2px;
   color: #C4C3AF;
-  width: 92%;
+  width: 100%;
   backdrop-filter: blur(4px);
   font-family: 'Bangers';
+  z-index: 2;
 }
 
 p.profile-name {
   margin-left: 5px;
   letter-spacing: 2px;
+  grid-column: 1/1;
+  font-size: 1rem
 }
 
 p.profile-description {
   margin-left: 5px;
-  font-size: 12px;
-  letter-spacing: 1px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  grid-row-start: 2;
+  grid-column: 1 / span 2;
 }
 
 .cv_button {
   background: linear-gradient(to bottom, #c4c3af 5%, #ffffff 100%);
-  background-color: #c4c3af;
-  border-radius: 40px;
+  border-radius: 10px;
   cursor: pointer;
   color: #000000;
   font-family: 'Bangers';
-  font-size: 20px;
-  padding: 10px 10px;
+  font-size: 1.5rem;
   text-decoration: none;
-  position: absolute;
-  right: 20px;
-  top: 20px;
+  grid-column: 2 / 2;
+  padding: 5px;
+  padding-right: 8px;
 }
 
 .cv_button:hover {
