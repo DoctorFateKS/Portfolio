@@ -8,8 +8,8 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-areas:
-    "profile projects projects projects projects test2"
-    "test3 test3 test4 test4 . ."
+    "profile projects projects projects projects quests"
+    "blog blog test4 test4 . ."
     "test5 test5 test6 test6 test7 test7";
   gap: 10px;
   margin: 10px;
@@ -123,6 +123,7 @@ p.profile-description {
   backdrop-filter: blur(4px);
   font-family: 'Bangers';
   text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  right: 2px;
 }
 
 p.project-name {
@@ -150,16 +151,16 @@ p.project-name {
   background-color: #ffffff;
 }
 
-.test2 {
-  grid-area: test2;
+.quests {
+  grid-area: quests;
   grid-row: 1 / span 2;
   background: #ffffff;
   height: 500px;
   border: 2px solid black;
 }
 
-.test3 {
-  grid-area: test3;
+.blog {
+  grid-area: blog;
   grid-column: 1 / span 3;
   width: calc(100% - 15.5%);
   background: #000;
@@ -168,15 +169,57 @@ p.project-name {
   clip-path: polygon(0% 0%, 100% 0%, 93% 100%, 0% 100%);
 }
 
-.test3::before {
+.blog::before {
   content: '';
-  background: #ffffff;
+  background: url(/assets/build-api-rails.jpg) no-repeat center center;
+  background-size: cover;
   height: 238px;
   width: calc(100% - 4px);
   clip-path: polygon(0% 0%, 100% 0%, 93% 100%, 0% 100%);
   position: absolute;
   left: 2px;
   top: 2px;
+}
+
+.infos-blog {
+  position: absolute;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  bottom: 0px;
+  color: #C4C3AF;
+  width: 100%;
+  backdrop-filter: blur(4px);
+  font-family: 'Bangers';
+  text-shadow: 1px 1px 2px black;
+  left: 2px;
+  bottom: 2px;
+}
+
+p.blog-name {
+  margin-left: 5px;
+  letter-spacing: 2px;
+  grid-column: 1 / 1;
+  font-size: 1rem;
+}
+
+.blog_button {
+  background: linear-gradient(to bottom, #c4c3af 5%, #ffffff 100%);
+  border-radius: 10px;
+  cursor: pointer;
+  color: #000000;
+  font-family: 'Bangers';
+  font-size: 1.5rem;
+  text-decoration: none;
+  grid-column: 2 / 2;
+  padding: 5px;
+  padding-right: 8px;
+}
+
+.blog_button:hover {
+  background: linear-gradient(to bottom, #ffffff 5%, #c4c3af 100%);
+  background-color: #ffffff;
 }
 
 .test4 {
