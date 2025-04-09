@@ -8,7 +8,7 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-areas:
-    "profile projects projects projects projects quests"
+    "profile projects projects projects projects stacks"
     "blog blog test4 test4 . ."
     "test5 test5 test6 test6 test7 test7";
   gap: 10px;
@@ -151,12 +151,21 @@ p.project-name {
   background-color: #ffffff;
 }
 
-.quests {
-  grid-area: quests;
+.stacks {
+  grid-area: stacks;
   grid-row: 1 / span 2;
   background: #ffffff;
   height: 500px;
   border: 2px solid black;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  justify-items: center;
+}
+
+.icon-stacks {
+  height: 40px;
+  padding: 5px;
 }
 
 .blog {
