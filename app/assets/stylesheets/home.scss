@@ -10,7 +10,7 @@
   grid-template-areas:
     "profile projects projects projects projects stacks"
     "blog blog test4 test4 . ."
-    "test5 test5 test6 test6 test7 test7";
+    "calendar calendar test6 test6 test7 test7";
   gap: 10px;
   margin: 10px;
 }
@@ -159,7 +159,7 @@ p.project-name {
   border: 2px solid black;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-rows: repeat(8, 1fr);
   justify-items: center;
 }
 
@@ -253,11 +253,8 @@ p.blog-name {
   top: 2px;
 }
 
-.test5 {
-  grid-area: test5;
-  background: #ffffff;
-  height: 238px;
-  border: 2px solid black;
+iframe {
+  width: 100%;
 }
 
 .test6 {
@@ -355,4 +352,42 @@ p.blog-name {
 .learning{
   font-family: 'Bangers';
   font-size: 1.2rem;
+}
+
+.calendar {
+  grid-area: calendar;
+  background: #ffffff;
+  height: 229px;
+  border: 2px solid black;
+  overflow: auto;
+  padding: 5px;
+  grid-template-columns: 1fr 1fr;
+  font-family: 'Bangers';
+  letter-spacing: 1px;
+}
+
+.date {
+  font-family: 'Bangers';
+  font-size: 50px;
+  display: grid;
+  margin: 0;
+}
+
+.day {
+  color: #C4C3AF;
+  font-weight: 600;
+  font-size: 100px;
+  grid-column-start: 1;
+}
+
+.quest-title {
+  text-align: center;
+  font-size: 30px;
+  color: #C4C3AF;
+}
+
+.quest-description {
+  grid-column: span 2;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
 }
