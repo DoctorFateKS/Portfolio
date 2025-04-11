@@ -10,7 +10,7 @@
   grid-template-areas:
     "profile projects projects projects projects stacks"
     "blog blog test4 test4 . ."
-    "calendar calendar test6 test6 test7 test7";
+    "calendar calendar test6 test6 testimony testimony";
   gap: 10px;
   margin: 10px;
 }
@@ -264,8 +264,8 @@ iframe {
   border: 2px solid black;
 }
 
-.test7 {
-  grid-area: test7;
+.testimony {
+  grid-area: testimony;
   background: #ffffff;
   height: 238px;
   border: 2px solid black;
@@ -390,4 +390,25 @@ iframe {
   grid-column: span 2;
   font-family: 'Courier New', Courier, monospace;
   text-align: left;
+}
+
+.quote {
+  margin: 10px;
+  overflow: auto;
+}
+
+.user-icon {
+  width: 70px;
+  border-radius: 50%;
+  border: 1px solid black;
+  padding: 5px;
+  float: left;
+}
+
+.testimonial {
+  background-color: #aba98f;
+  margin-left: 90px;
+  border-radius: 12px;
+  padding: 5px 5px 5px 10px;
+  font-style: italic;
 }
