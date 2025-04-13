@@ -1,9 +1,12 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+Profile.find_or_create_by(name: "Kevin Saison") do |profile|
+  profile.title = "Ruby on Rails Développeur"
+  profile.bio = "GUM GUMMMMMMM... RAILSSSSS !!!!!!!!!!!!!"
+  profile.skills = ["Ruby", "Rails", "Javascript"]
+  profile.social_links = {
+    "github" => "https://github.com/DoctorFateKS",
+    "linkedin" => "https://www.linkedin.com/in/kevin-saison-25875317b/"
+  }
+  profile.save!
+end
+
+puts "Profil par défaut créé"
