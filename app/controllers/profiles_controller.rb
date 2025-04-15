@@ -1,7 +1,7 @@
 class ProfilesController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :profile_not_found
 
-  before_action :set_profile, only: [:show, :edit, :update, :destroy]
+  before_action :set_profile, only: [:update]
 
   def show
     @profile = Profile.first
@@ -11,6 +11,7 @@ class ProfilesController < ApplicationController
   end
 
   def update
+    puts params[:profile][:avatar] # Debug
     if @profile.update(profile_params)
       redirect_to @profile, notice: 'Profile was successfully updated.'
     else
