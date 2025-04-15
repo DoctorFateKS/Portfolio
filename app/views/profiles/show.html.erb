@@ -4,6 +4,22 @@
     <p><%= @profile.title %></p>
   </div>
 
+  <% if @profile.avatar.attached? %>
+    <%= image_tag url_for(@profile.avatar), style: "width: 200px; height: auto;" %>
+  <% else %>
+    <p>No avatar uploaded yet.</p>
+  <% end %>
+  <%= form_with(model: @profile, local: true, html: { multipart: true }) do |form| %>
+    <div>
+      <%= form.label :avatar, "Upload Avatar" %>
+      <%= form.file_field :avatar %>
+    </div>
+
+    <div>
+      <%= form.submit "Update Profile" %>
+    </div>
+  <% end %>
+
   <div class="profile-bio"><p><%= @profile.bio %></p></div>
 
   <div class="profile-skills">
