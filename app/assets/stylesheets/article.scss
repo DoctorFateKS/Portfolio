@@ -28,3 +28,13 @@
 .article-title-link:hover {
   text-decoration: underline; /* Add underline on hover */
 }
+
+.comment {
+  margin-bottom: 1em;
+  padding: 0.5em;
+  border: 1px solid #ddd;
+}
+
+.commenter {
+  font-weight: bold;
+}
