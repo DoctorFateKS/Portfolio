@@ -2,8 +2,11 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
 
   def index
-    @articles = Article.all
-    @articles = Article.order(:title).limit(5)
+    if params[:search]
+      @articles = Article.where("title ILIKE ? OR content ILIKE ?", "%#{params[:search]}%", "%#{params[:search]}%")
+    else
+      @articles = Article.all
+    end
   end
 
   def show
