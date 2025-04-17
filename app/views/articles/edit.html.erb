@@ -1,0 +1,8 @@
+<h1>Edit Article</h1>:
+<%= form_with(model: @article, url: article_path(@article), method: :patch) do |form| %>
+  <%= form.label :title %><br>
+  <%= form.text_field :title %>
+  <%= form.label :content %><br>
+  <%= form.text_area :content %>
+  <%= form.submit %>
+<% end %>

@@ -1,0 +1,17 @@
+<div class="articles-container">
+  <%= form_tag articles_path, method: :get do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search" %>
+  <% end %>
+  <% if @articles.empty? %>
+    <p>No articles available.</p>
+  <% else %>
+    <ul>
+      <% @articles.each do |article| %>
+        <li class="article-item"><%= link_to article.title, article_path(article) %></li>
+      <% end %>
+    </ul>
+  <% end %>
+  <p><%= link_to "Créer un article", new_article_path %></p>
+  <%= paginate @articles %>
+</div>
