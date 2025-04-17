@@ -13,4 +13,5 @@
     </ul>
   <% end %>
   <p><%= link_to "Créer un article", new_article_path %></p>
+  <%= paginate @articles %>
 </div>
