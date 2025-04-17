@@ -10,3 +10,8 @@ Profile.find_or_create_by(name: "Kevin Saison") do |profile|
 end
 
 puts "Profil par défaut créé"
+
+Article.create!(title: "C'est quoi Internet ?", content: "Coming soon")
+Article.create!(title: "Histoire et Evolution de l'Internet", content: "Coming soon")
+Article.create!(title: "Comprendre le World Wide Web (WWW)", content: "Coming soon")
+Article.create!(title: "Internet vs. Intranet vs. Extranet", content: "Coming soon")

@@ -1,0 +1,30 @@
+.articles-container {
+  width: 80%;           /* Sets the width of the container to 80% of its parent */
+  margin: 0 auto;      /* Centers the container horizontally */
+  font-family: Arial, sans-serif; /* Sets a default font for the container */
+}
+
+.article-item {
+  margin-bottom: 15px;   /* Adds space between article items */
+  border-bottom: 1px solid #eee; /* Adds a subtle border below each item */
+  padding-bottom: 10px;  /* Adds padding below each item, above the border */
+}
+
+.article-link {
+  color: #333;          /* Sets the link color to dark gray */
+  text-decoration: none; /* Removes the underline from the links */
+  font-size: 1.2em;      /* Sets the font size to 1.2 times the default size */
+}
+
+.article-link:hover {
+  color: #007bff;       /* Changes the link color on hover */
+}
+
+.article-title-link {
+  color: #007bff; /* Example: Blue color */
+  text-decoration: none; /* Remove underline */
+}
+
+.article-title-link:hover {
+  text-decoration: underline; /* Add underline on hover */
+}

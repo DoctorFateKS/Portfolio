@@ -1,0 +1,11 @@
+<div class="articles-container">
+  <% if @articles.empty? %>
+    <p>No articles available.</p>
+  <% else %>
+    <ul>
+      <% @articles.each do |article| %>
+        <li class="article-item"><%= link_to article.title, article_path(article) %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
