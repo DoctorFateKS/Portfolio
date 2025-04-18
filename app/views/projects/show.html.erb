@@ -13,3 +13,5 @@
 <% if @project.source_code_link.present? %>
   <a href="<%= @project.source_code_link %>" target="_blank">Source Code</a>
 <% end %>
+
+<%= link_to "Delete", project_path(@project), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
