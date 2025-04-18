@@ -11,8 +11,9 @@
         <% if project.source_code_link.present? %>
           <a href="<%= project.source_code_link %>" target="_blank">Source Code</a>
         <% end %>
+        <%= link_to "Edit", edit_project_path(project) %>
       </div>
     <% end %>
   <% end %>
-  <%= link_to "Add New Project", new_project_path, class: "btn btn-primary" %>
+  <%= link_to "Add New Project", new_project_path %>
 </div>
