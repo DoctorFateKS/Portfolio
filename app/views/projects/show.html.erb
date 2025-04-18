@@ -14,4 +14,18 @@
   <a href="<%= @project.source_code_link %>" target="_blank">Source Code</a>
 <% end %>
 
+<p>
+  <strong>Categories:</strong>
+  <% @project.categories.each do |category| %>
+    <span class="category"><%= category.name %></span>
+  <% end %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <% @project.tags.each do |tag| %>
+    <span class="tag"><%= tag.name %></span>
+  <% end %>
+</p>
+
 <%= link_to "Delete", project_path(@project), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
