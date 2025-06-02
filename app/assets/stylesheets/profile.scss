@@ -1,79 +1,161 @@
 .profile-container {
-  width: 80%;
+  width: 90%;
+  height: 1700px;;
   max-width: 1200px; /* Maximum width for larger screens */
   margin: 0 auto; /* Center the container */
-  padding: 20px;
   border: 3px solid black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 330px);
+  gap: 20px;
 }
 
 .profile-header {
-  text-align: center;
-  margin-bottom: 30px;
+  grid-column: span 2;
+  position: relative;
 }
 
-.profile-header h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-  color: #333;
+.warp__placeholder{
+  position: absolute;
+  color: transparent;
+  font-size: 22px;
 }
 
-.profile-header p {
-  font-size: 1.2em;
-  color: #777;
+.warp {
+  display: block;
+  position: relative;
+  width: 80px;
+  height: 55px;
+  font: normal 22px Bangers;
 }
 
-.profile-bio {
-  margin-bottom: 30px;
-  line-height: 1.6;
+[class*='warp__'] {
+  display: block;
+  position: absolute;
 }
 
-.profile-skills {
-  margin-bottom: 30px;
+.warp__0 {
+  transform-origin: 50% 19px;
+  transform: translate(25.5244px,28.714100000000002px) rotate(-0.527804rad);
 }
 
-.profile-skills h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+.warp__1 {
+  transform-origin: 50% 19px;
+  transform: translate(35.4817px,24.042299999999997px) rotate(-0.434601rad);
 }
 
-.profile-skills ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
+.warp__2 {
+  transform-origin: 50% 19px;
+  transform: translate(44.1117px,20.458399999999997px) rotate(-0.353464rad);
 }
 
-.profile-skills li {
-  background-color: #eee;
-  padding: 5px 10px;
-  margin: 5px;
-  border-radius: 5px;
+.warp__3 {
+  transform-origin: 50% 19px;
+  transform: translate(53.4417px,18.016800000000003px) rotate(-0.290194rad);
 }
 
-.profile-social {
-  margin-bottom: 30px;
+.warp__4 {
+  transform-origin: 50% 19px;
+  transform: translate(58.8414px,15.8155px) rotate(-0.223112rad);
 }
 
-.profile-social h2 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
+.name {
+  font-family: 'Bangers';
+  font-size: 120px;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #ffffff;
+  letter-spacing: 10px;
+  position: absolute;
+  top: 10px;
+  left: 8px;
 }
 
-.profile-social ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
+.name span {
+  font-family: 'Bangers';
+  font-size: 180px;
 }
 
-.profile-social li {
+.title-profile {
+  font-size: 20px;
+  font-family: 'Bangers';
+  letter-spacing: 2px;
+  position: absolute;
+  top: 180px;
+  left: 235px;
+}
+
+.profile-header-bulle {
+  width: 200px;
+  position: absolute;
+  bottom: -40px;
+  left: 30px;
+}
+
+.profile-img {
+  grid-column: 3;
+  grid-row: 1;
+  position: relative;
+}
+
+.background-profile {
+  position: absolute;
+  width: 300px;
+  right: 0;
+  z-index: -1;
+}
+
+.profile-image-header {
+  position: absolute;
+  width: 300px;
+  bottom: -20px;
+  left: -100px;
+}
+
+.education {
+  grid-column: span 2;
+  grid-row: 2;
+  position: relative;
+  border: 2px solid black;
+  margin-left: 10px;
+  z-index: -1;
+}
+
+.skills {
+  grid-column: 3;
+  grid-row: 2;
+  position: relative;
+  background-color: black;
   margin-right: 10px;
 }
 
-.profile-social a {
-  color: #333;
-  text-decoration: none;
+.experience {
+  grid-column: span 3;
+  grid-row: span 2;
+  position: relative;
+  background: black;
+  margin-left: 10px;
+  margin-right: 10px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 91%, 0% 68%);
 }
 
-.profile-social i {
-  font-size: 1.5em;
+.experience::before {
+  content: '';
+  background: #ffffff;
+  height: 615px;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 75%);
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  right: 2px;
+}
+
+.accomplissement {
+  grid-column: 1;
+  grid-row: 5;
+  position: relative;
+  background-color: black;
+  margin-left: 10px;
+  top: -238px;
+  z-index: -1;
+  height: 530px;
 }

@@ -1,45 +1,39 @@
 <div class="profile-container">
   <div class="profile-header">
-    <h1><%= @profile.name %></h1>
-    <p><%= @profile.title %></p>
-  </div>
+    <div class="warp" aria-labelledby="warp-label">
+      <span id="warp-label" class="warp__placeholder">
+        Kevin
+      </span>
 
-  <% if @profile.avatar.attached? %>
-    <%= image_tag url_for(@profile.avatar), style: "width: 200px; height: auto;" %>
-  <% else %>
-    <p>No avatar uploaded yet.</p>
-  <% end %>
-  <%= form_with(model: @profile, local: true, html: { multipart: true }) do |form| %>
-    <div>
-      <%= form.label :avatar, "Upload Avatar" %>
-      <%= form.file_field :avatar %>
+      <span aria-role="presentation">
+          <span class="warp__0">
+            K
+          </span>
+          <span class="warp__1">
+            e
+          </span>
+          <span class="warp__2">
+            v
+          </span>
+          <span class="warp__3">
+            i
+          </span>
+          <span class="warp__4">
+            n
+          </span>
+      </span>
     </div>
-
-    <div>
-      <%= form.submit "Update Profile" %>
-    </div>
-  <% end %>
-
-  <div class="profile-bio"><p><%= @profile.bio %></p></div>
-
-  <div class="profile-skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Ruby on Rails</li>
-      <li>JavaScript</li>
-      <li>React</li>
-      <li>PostgreSQL</li>
-      <li>HTML</li>
-      <li>CSS</li>
-    </ul>
+    <div class="name"><span>S</span>aison</div>
+    <div class="title-profile">Développeur Ruby on Rails</div>
+    <img src="<%= asset_path('profile-header-bulle.png') %>" alt="profile header bulle" class="profile-header-bulle">
   </div>
-
-  <div class="profile-social">
-    <h2>Social Media</h2>
-    <ul>
-      <li><a href="#"><i class="fab fa-github"></i></a></li>
-      <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
-      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-    </ul>
+  <div class="profile-img">
+    <img src="<%= asset_path('background-profile.png') %>" alt="background profile" class="background-profile">
+    <img src="<%= asset_path('profile-image-header.png') %>" alt="profile" class="profile-image-header">
+    <img src="<%= asset_path('profile-image-bulle.png') %>" alt="profile image bulle" class="profile-image-bulle">
   </div>
+  <div class="education"></div>
+  <div class="skills"></div>
+  <div class="experience"></div>
+  <div class="accomplissement"></div>
 </div>
