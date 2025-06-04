@@ -1,7 +1,9 @@
+@import 'typed';
+
 .title {
   font-family: 'Bangers';
   letter-spacing: 2px;
-  margin-left: 15px;
+  margin: 0 0 0 15px;
 }
 
 .container {
@@ -271,23 +273,70 @@ iframe {
   border: 2px solid black;
 }
 
-.stats {
+.sub-header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   gap: 10px;
-  margin: 5px;
 }
 
 @media screen and (max-width: 980px) {
-  .stats {
+  .sub-header {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
   }
 }
 
-.stats-left {
+.input-wrapper {
   font-family: 'Bangers';
+  color: #aba98f;
+  margin-left: 15px;
+  letter-spacing: 1px;
+  > input,
+  > .placeholder {
+    display: block;
+    appearance: none;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+  }
+  > .placeholder {
+    pointer-events: none;
+    @include typed(
+      "Junior today. Architect tomorrow.",
+      "For every bug, a blade of code.",
+      "Rails isn't just a framework — it's a dojo.",
+      "Building SaaS like it's a Shōnen battle.",
+      "One pull request closer to mastery.",
+      "Code. Test. Refactor. Repeat — my ninja way.",
+      "Not just building apps — forging legends.",
+      "Ruby is my sword. Rails is my armor.",
+      "Turning specs into superpowers.",
+      "Deploying dreams. Debugging reality.",
+      "From zero to deploy — like a training arc.",
+      "Press ⌘+S to save the world.",
+      "Every app starts with 'require' and a dream.",
+      "I refactor like I’m unlocking a new technique.",
+      "Backend alchemist. Frontend tactician.",
+      "Rails 7. PostgreSQL. Ultra Instinct mode: ON.",
+      "Chasing perfection like a final boss fight.",
+      "I write code like it’s a climactic episode.",
+      "RSpec: the real final exam arc.",
+      1.5,
+      (
+        caret-width: 2px,
+        caret-space: 2px
+      )
+    );
+  }
+  > input {
+    &:focus,
+    &:active {
+      + .placeholder {
+        display: none;
+      }
+    }
+  }
 }
 
 .stats-right {
