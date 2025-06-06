@@ -6,17 +6,17 @@
 
   <div class="stats-right">
     <div class="stats-infos1">
-      <p class="stats-number">12</p>
+      <p class="stats-number" id="project_count" data-target="<%= @projects.length %>">0</p>
       <i class="fa-solid fa-laptop stats-icon"></i>
       <p class="stats-title">Projets</p>
     </div>
     <div class="stats-infos2">
-      <p class="stats-number">66</p>
+      <p class="stats-number" id="pr-count" data-target="<%= @pr_count %>">0</p>
       <i class="fa-brands fa-github stats-icon"></i>
       <p class="stats-title">Pull Requests</p>
     </div>
     <div class="stats-infos3">
-      <p class="stats-number">252</p>
+      <p class="stats-number" id="total-contributions" data-target="<%= @total_contributions %>">0</p>
       <i class="fa-solid fa-handshake stats-icon"></i>
       <p class="stats-title">Contributions</p>
     </div>
