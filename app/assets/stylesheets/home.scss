@@ -34,7 +34,7 @@
 
 .profile::before {
   content: '';
-  background: url('profile_photo.png') no-repeat center center;
+  background: url('profile_photo_manga.png') no-repeat center center;
   background-size: cover;
   height: 250px;
   width: calc(100% - 5px);
@@ -48,7 +48,6 @@
   position: absolute;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(2, 1fr);
   align-items: center;
   justify-items: center;
   bottom: 0px;
@@ -57,7 +56,6 @@
   width: 100%;
   backdrop-filter: blur(4px);
   font-family: 'Bangers';
-  text-shadow: 1px 1px 2px rgb(0, 0, 0);
 }
 
 p.profile-name {
@@ -65,14 +63,6 @@ p.profile-name {
   letter-spacing: 2px;
   grid-column: 1/1;
   font-size: 1rem
-}
-
-p.profile-description {
-  margin-left: 5px;
-  font-size: 1rem;
-  letter-spacing: 2px;
-  grid-row-start: 2;
-  grid-column: 1 / span 2;
 }
 
 .cv_button {
