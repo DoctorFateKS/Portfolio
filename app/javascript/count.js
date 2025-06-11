@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function animateCount(el) {
     const target = +el.getAttribute('data-target');
     let count = 0;
-    const increment = target / 500; // 100 étapes d'animation
+    const increment = target / 500;
 
     const updateCount = () => {
       count += increment;
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         el.textContent = Math.ceil(count);
         requestAnimationFrame(updateCount);
       } else {
-        el.textContent = target; // s’assurer d’atteindre la cible exacte
+        el.textContent = target;
       }
     };
 

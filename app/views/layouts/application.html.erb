@@ -24,24 +24,5 @@
     <%= render "shared/navbar" %>
     <%= yield %>
     <%= render "shared/footer" %>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const toggleButton = document.querySelector(".menu-toggle");
-        const navbarContent = document.querySelector(".navbar-content");
-
-        toggleButton.addEventListener("click", function () {
-          navbarContent.classList.toggle("show");
-        });
-      });
-    </script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-      const grayscaleToggle = document.querySelector('.grayscale-toggle');
-
-      grayscaleToggle.addEventListener('click', function() {
-        document.body.classList.toggle('color-mode');
-      });
-    });
-    </script>
   </body>
 </html>
