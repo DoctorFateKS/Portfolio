@@ -146,18 +146,33 @@ p.project-name {
 .stacks {
   grid-area: stacks;
   grid-row: 1 / span 2;
-  background: #ffffff;
+  gap: 5px;
+  background: linear-gradient(to bottom, #f9f9f9, #fdfdfd);
   height: 500px;
   border: 2px solid black;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   justify-items: center;
 }
 
 .icon-stacks {
-  height: 40px;
-  padding: 5px;
+  height: 60px;
+  width: 60px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  padding: 8px;
+  margin-top: 3px;
+  transition: 1s all;
+  border: 1px solid #CAC9B4;
+}
+
+.icon-stacks:hover {
+    transform: rotate(5deg);
+    transition: 0.5s all;
+    width: 70px;
+    height: 70px;
 }
 
 .blog {

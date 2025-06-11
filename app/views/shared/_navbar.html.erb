@@ -16,18 +16,4 @@
     <%= link_to "Contact", new_contact_path %>
   </div>
 
-  <button class="grayscale-toggle" aria-label="Toggle mode" onclick="toggleGrayscaleMode()">
-    <%= image_tag "couleur-toggle", alt: "Logo", class: "logo-grayscale-toggle no-filter", id: "grayscale-toggle-image" %>
-  </button>
-
-  <script>
-    function toggleGrayscaleMode() {
-      const image = document.getElementById('grayscale-toggle-image');
-      if (image.src.includes('couleur-toggle')) {
-        image.src = '<%= asset_path("mangas-toggle") %>';
-      } else {
-        image.src = '<%= asset_path("couleur-toggle") %>';
-      }
-    }
-  </script>
 </div>
